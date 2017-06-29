@@ -7,6 +7,7 @@ class Card extends React.Component {
     super(props, context);
     this.state = {
       complete: false,
+      archive: false
     }
     this._markComplete = this._markComplete.bind(this);
     }
@@ -24,12 +25,18 @@ class Card extends React.Component {
       console.log ('it works');
     };
 
+    let buttonArchive = null;
+    if (this.state = { archive: false} ) {
+      buttonArchive = <button className="delete-card" >X</button>;
+
+    };
+
     return(
       <div className="card">
         <div className="title">{ this.props.title }</div>
         <div className="description">{ this.props.description }</div>
         <div className="actions">
-          <button className="delete-card" >X</button>
+          { buttonArchive }
           { buttonComplete }
         </div>
       </div>
@@ -41,6 +48,11 @@ class Card extends React.Component {
     e.preventDefault();
     this.setState({ complete: true });
     console.log(e);
+  }
+
+  _markArchive(e) {
+    e.preventDefault();
+    this.setState({ archive: true });
   }
 
 }
