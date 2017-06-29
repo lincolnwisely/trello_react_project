@@ -5,6 +5,7 @@ class CardColumn extends React.Component {
   constructor(props, context) {
     super(props, context);
     this._getCards = this._getCards.bind(this);
+  
     }
 
     render() {
