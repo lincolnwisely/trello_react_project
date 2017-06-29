@@ -32,6 +32,8 @@ package.json - a file that defines what node packages our gulpfile uses (you wil
 
 **Compiling Your React Application**: Now that everything is installed let's run a `gulp build`. This command will compile your jsx or React file into that bundle.js we were talking about. You will have to run this command everytime you change your jsx file.
 
+SIDE NOTE: Run 'gulp-v' in your terminal to check whether you have gulp installed. If you see "Command not found",  run "sudo npm install gulp -g". You'll have to enter your system password. Once installed, you can use gulp commands. 
+
 > There is a way to automate this... like have gulp watch your react files and every time they change it will automatically run gulp for you... however, I think it is better for you to run this command yourself at first, so you know how it works.
 
 Cool! You should now be able to open the index.html file in Chrome and be on your way!
